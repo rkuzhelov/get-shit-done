@@ -494,14 +494,19 @@ Update STATE.md:
    - If current phase was renumbered, update the position
    - `Phase: X of Y` → update X if needed (Y stays same - no phases added/removed)
 
-2. **Update phase references in "### Decisions" section** (under "## Accumulated Context"):
-   Decision entries contain phase-plan references that must be updated:
+2. **Update phase references throughout the entire file** for moved phases:
+   Phase references can appear in various sections (e.g., "### Decisions" under "## Accumulated Context").
+
+   Examples of patterns to update:
    ```
    Before: - **02-01:** Distribute content inline per component section
    After:  - **04-01:** Distribute content inline per component section
+
+   Before: Phase 2 work completed ahead of schedule
+   After:  Phase 4 work completed ahead of schedule
    ```
 
-   Update all `**{old_phase}-{plan}:**` patterns to `**{new_phase}-{plan}:**` according to the mapping.
+   Update all phase-plan references (`{old_phase}-{plan}` → `{new_phase}-{plan}`) and prose references (`Phase {old}` → `Phase {new}`) according to the mapping.
 
 3. **Add roadmap evolution entry** under "## Accumulated Context" → "### Roadmap Evolution":
    ```
