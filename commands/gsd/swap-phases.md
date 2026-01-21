@@ -494,7 +494,16 @@ Update STATE.md:
    - If current phase was renumbered, update the position
    - `Phase: X of Y` → update X if needed (Y stays same - no phases added/removed)
 
-2. **Add roadmap evolution entry** under "## Accumulated Context" → "### Roadmap Evolution":
+2. **Update phase references in "### Decisions" section** (under "## Accumulated Context"):
+   Decision entries contain phase-plan references that must be updated:
+   ```
+   Before: - **02-01:** Distribute content inline per component section
+   After:  - **04-01:** Distribute content inline per component section
+   ```
+
+   Update all `**{old_phase}-{plan}:**` patterns to `**{new_phase}-{plan}:**` according to the mapping.
+
+3. **Add roadmap evolution entry** under "## Accumulated Context" → "### Roadmap Evolution":
    ```
    - Phases reordered: Prioritized Phase {new_phase2} ({name}) over Phase {new_phase1} ({name})
    ```
